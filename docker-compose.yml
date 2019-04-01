@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  about-me-app:
+    image: about-me
+    expose:
+      - 80
+    environment:
+      VIRTUAL_HOST: nitinkumar.tech
+      LETSENCRYPT_HOST: nitinkumar.tech
+      LETSENCRYPT_EMAIL: nitinkr0411@gmail.com
+
+networks:
+    default:
+        external:
+            name: nginx-proxy
